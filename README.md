@@ -1,2 +1,2 @@
-# DisSys
-Distribute System LAB
+# Distributed Bugs
+Distributed System LAB
