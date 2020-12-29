@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-for ((i = 0; i< 30 ;i++)) {
+for ((i = 0; i< 15 ;i++)) {
 
 	go test -run BasicAgree
 
