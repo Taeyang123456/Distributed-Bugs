@@ -253,6 +253,7 @@ func (rf *Raft) RequestVote(args RequestVoteArgs, reply *RequestVoteReply) {
 		rf.ServerState = FOLLOWER
 		rf.CurrentTerm = args.Term
 		rf.VotedFor = -1
+		rf.VotesCount = 0
 
 		if isUpToDate {
 			rf.VotedFor = args.CandidateId
@@ -354,6 +355,7 @@ func (rf *Raft) AppendEntries(args AppendEntriesArgs, reply *AppendEntriesReply)
 		rf.ServerState = FOLLOWER
 		rf.CurrentTerm = args.Term
 		rf.VotedFor = -1
+		rf.VotesCount = 0
 
 		//fmt.Printf("%d recieve AppendEntries from %d with Term = %d\n", rf.me, args.LeaderId, rf.CurrentTerm)
 
